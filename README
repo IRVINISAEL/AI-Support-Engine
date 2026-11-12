@@ -88,3 +88,5 @@ Formato válido en los 24 resultados.
 
 ## Conclusión técnica
 Ambos motores obtuvieron 12/12 (100 %) en categoría y prioridad frente a la clasificación de referencia, incluidos los dos casos diseñados para confundir. Por lo tanto, en esta muestra no hay un ganador por exactitud. El motor tradicional resultó más rápido, gratuito, determinista y resistente a la inyección de instrucciones, porque ignora el contenido que pide cambiar la prioridad; sin embargo, sus palabras clave fueron diseñadas conociendo el tipo de casos, así que probablemente falle con redacciones nuevas o sin palabras clave. El motor generativo entiende el contexto, generó respuestas personalizadas y se defendió del prompt injection gracias al prompt y a la validación en código, pero depende de un proveedor externo, tiene latencia y puede fallar (vimos 404, 503 y timeouts). Para producción conviene un enfoque híbrido: reglas para seguridad y el modelo para respuestas y casos ambiguos.
+
+Entrega: rama feature/ai-support-engine hacia develop.
