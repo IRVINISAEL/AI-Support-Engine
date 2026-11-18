@@ -53,6 +53,17 @@ Ejecuta 12 casos en ambos motores y guarda `results.csv`.
 - El prompt trata el mensaje del usuario como datos, no como instrucciones (defensa contra prompt injection).
 - `requiresHumanReview` se fuerza en código para SECURITY y para mensajes con términos de seguridad, sin depender del modelo.
 
+## Motor ML (`mode: "ml"`)
+Pipeline de scikit-learn: `TfidfVectorizer(ngram_range=(1,2))` + `LogisticRegression`. Predice la **categoría**; la **prioridad** se calcula con las reglas de `traditional.py` (`priority_for`), porque el dataset no tiene etiquetas de prioridad.
+
+Entrenar (o reentrenar tras modificar `data/tickets.csv`):
+    python scripts/train_model.py
+
+Revisión humana en el motor ML: se activa si la categoría es SECURITY, si el mensaje contiene términos de seguridad (forzado en código) o si la confianza del modelo es menor a 0.40.
+
+Resultados: accuracy 0.89 en el 20 % de prueba del dataset y 11/12 en los casos de `run_comparison.py`.
+Límites: dataset pequeño y sintético; el modelo solo conoce 4 categorías.
+
 ## Estructura
 ```
 app/main.py         endpoint POST /api/analyze
@@ -88,3 +99,5 @@ Formato válido en los 24 resultados.
 
 ## Conclusión técnica
 Ambos motores obtuvieron 12/12 (100 %) en categoría y prioridad frente a la clasificación de referencia, incluidos los dos casos diseñados para confundir. Por lo tanto, en esta muestra no hay un ganador por exactitud. El motor tradicional resultó más rápido, gratuito, determinista y resistente a la inyección de instrucciones, porque ignora el contenido que pide cambiar la prioridad; sin embargo, sus palabras clave fueron diseñadas conociendo el tipo de casos, así que probablemente falle con redacciones nuevas o sin palabras clave. El motor generativo entiende el contexto, generó respuestas personalizadas y se defendió del prompt injection gracias al prompt y a la validación en código, pero depende de un proveedor externo, tiene latencia y puede fallar (vimos 404, 503 y timeouts). Para producción conviene un enfoque híbrido: reglas para seguridad y el modelo para respuestas y casos ambiguos.
+
+Entrega: rama feature/ai-support-engine hacia develop.

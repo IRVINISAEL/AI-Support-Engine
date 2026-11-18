@@ -3,7 +3,7 @@ from pydantic import BaseModel, Field, field_validator
 
 Category = Literal["ACCESS", "BUG", "FEATURE", "SECURITY"]
 Priority = Literal["LOW", "MEDIUM", "HIGH", "CRITICAL"]
-Mode = Literal["traditional", "generative"]
+Mode = Literal["traditional", "generative", "ml"]
 
 
 class AnalyzeRequest(BaseModel):

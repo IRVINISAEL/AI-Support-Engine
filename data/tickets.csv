@@ -1,0 +1,181 @@
+message,category
+No logro entrar a mi cuenta desde esta mañana,ACCESS
+Me sale usuario o contraseña incorrectos pero estoy seguro de que es la correcta,ACCESS
+Quiero restablecer mi contraseña pero nunca llega el correo,ACCESS
+Mi usuario fue bloqueado después de varios intentos fallidos,ACCESS
+No me llega el código de verificación en dos pasos,ACCESS
+No puedo acceder al panel de administración con mi usuario,ACCESS
+La página de login se queda cargando y no me deja ingresar,ACCESS
+Cambié mi clave ayer y ahora no me deja iniciar sesión,ACCESS
+Mi cuenta aparece como suspendida y no sé por qué,ACCESS
+El enlace para recuperar mi contraseña ya expiró,ACCESS
+Perdí mi teléfono y no puedo usar la autenticación de dos factores,ACCESS
+No puedo entrar con mi correo corporativo,ACCESS
+Me pide verificar mi identidad pero el código no funciona,ACCESS
+Se me olvidó el usuario con el que me registré,ACCESS
+Intento ingresar y me regresa siempre a la pantalla de inicio de sesión,ACCESS
+Mis credenciales dejaron de funcionar de un día para otro,ACCESS
+No tengo acceso a la plataforma desde que cambié de equipo,ACCESS
+El sistema dice que mi sesión expiró cada vez que intento entrar,ACCESS
+Necesito que me desbloqueen el acceso a mi cuenta por favor,ACCESS
+No puedo ingresar a la aplicación móvil con mi contraseña,ACCESS
+Mi contraseña no cumple los requisitos y no me deja cambiarla,ACCESS
+Ya no puedo acceder a mi perfil de cliente,ACCESS
+El inicio de sesión con Google no me funciona,ACCESS
+Me dice que mi cuenta no existe pero ya la usaba antes,ACCESS
+No puedo ingresar porque me pide un token que no tengo,ACCESS
+Mi cuenta quedó bloqueada y necesito entrar con urgencia,ACCESS
+No me deja iniciar sesión desde el celular,ACCESS
+Cada vez que pongo mi clave me marca error de autenticación,ACCESS
+"Necesito recuperar el acceso a mi cuenta, no recuerdo mi contraseña",ACCESS
+El correo de confirmación de mi registro nunca llegó y no puedo entrar,ACCESS
+No puedo acceder a mi cuenta desde otra computadora,ACCESS
+Me aparece acceso denegado al abrir mi cuenta,ACCESS
+Olvidé el correo con el que creé mi cuenta y no puedo ingresar,ACCESS
+El portal no reconoce mi usuario aunque lo escribo bien,ACCESS
+Mi acceso fue revocado sin aviso y no puedo trabajar,ACCESS
+"No puedo hacer login, la pantalla se queda en blanco al presionar entrar",ACCESS
+Se venció mi contraseña y el sistema no me permite crear una nueva,ACCESS
+No logro iniciar sesión con mi número de empleado,ACCESS
+Después de actualizar la app ya no puedo autenticarme,ACCESS
+Me bloquearon la cuenta por intentos fallidos de inicio de sesión,ACCESS
+No puedo cambiar mi contraseña desde la configuración de mi perfil,ACCESS
+Mi cuenta no me deja entrar y el botón de recuperar no hace nada,ACCESS
+Necesito ayuda para volver a entrar a mi usuario,ACCESS
+No me reconoce la huella ni la clave para iniciar sesión,ACCESS
+No consigo acceder al sistema con mis credenciales de siempre,ACCESS
+La aplicación se congela cuando abro la sección de facturas,BUG
+Me aparece un error 500 al guardar el formulario,BUG
+La página tarda muchísimo en cargar y a veces se queda en blanco,BUG
+El botón de enviar no hace nada cuando le doy clic,BUG
+El sistema se cierra de repente al subir un archivo,BUG
+"Los totales del reporte salen mal, no coinciden con los datos",BUG
+La app se traba cada vez que cambio de pestaña,BUG
+Me sale una pantalla en blanco al abrir el historial,BUG
+Los datos que guardo no se reflejan después de actualizar la página,BUG
+El módulo de pagos muestra una excepción y no procesa nada,BUG
+La aplicación se cae al intentar imprimir,BUG
+Las imágenes no cargan en el catálogo de productos,BUG
+"Hay un fallo al generar el PDF, sale un mensaje de error",BUG
+El buscador no devuelve resultados aunque el registro existe,BUG
+El servidor no responde y todo el sistema está lento,BUG
+Al editar un registro se borra la información que ya tenía,BUG
+La aplicación se reinicia sola cuando uso el filtro de fechas,BUG
+Se duplican los registros cada vez que presiono guardar,BUG
+El sistema marca error al exportar la información a CSV,BUG
+El menú desplegable no abre en el navegador Chrome,BUG
+"Tengo un problema con la sincronización, los cambios no se guardan",BUG
+La plataforma está caída desde hace una hora,BUG
+Se pierde la información cuando recargo la página,BUG
+El sistema muestra un mensaje de error desconocido al enviar el pedido,BUG
+La pantalla se queda congelada y tengo que cerrar la app,BUG
+El calendario muestra fechas incorrectas en los eventos,BUG
+"No carga la lista de clientes, solo aparece el círculo de carga",BUG
+La aplicación va muy lenta desde la última actualización,BUG
+Falla la descarga de los documentos adjuntos,BUG
+"El sistema no abre en mi navegador, aparece una página con error",BUG
+Los botones de la barra lateral dejaron de responder,BUG
+La app crashea cuando intento adjuntar una foto,BUG
+El reporte mensual no se genera y queda cargando para siempre,BUG
+Los números del dashboard no se actualizan en tiempo real,BUG
+Sale un error al intentar abrir un pedido antiguo,BUG
+El formulario no valida bien los campos y deja pasar datos vacíos,BUG
+El chat de la aplicación no envía los mensajes,BUG
+Hay un error en el cálculo de impuestos de la factura,BUG
+La aplicación deja de funcionar cuando hay muchos usuarios conectados,BUG
+"No sirve la página de pagos, aparece un error al confirmar",BUG
+El sistema se queda pegado al guardar cambios grandes,BUG
+Los correos de notificación llegan duplicados,BUG
+"Algo falla en la pantalla de inventario, no muestra los productos",BUG
+La opción de buscar por fecha no funciona correctamente,BUG
+El programa se cierra solo cada vez que lo abro,BUG
+Sería genial poder cambiar el idioma de la interfaz,FEATURE
+Quisiera que se pueda programar el envío de reportes automáticamente,FEATURE
+Podrían agregar notificaciones por correo cuando haya cambios,FEATURE
+Me gustaría tener un panel con gráficas de mis ventas,FEATURE
+Sugiero añadir una opción para exportar a PDF desde cualquier pantalla,FEATURE
+Estaría bien poder personalizar los colores de la aplicación,FEATURE
+Propongo integrar la plataforma con WhatsApp,FEATURE
+Quisiera una aplicación móvil para consultar mis pedidos,FEATURE
+Sería útil que el sistema permita filtrar por varios criterios a la vez,FEATURE
+Me encantaría poder compartir reportes con otros usuarios,FEATURE
+Podrían implementar atajos de teclado para tareas frecuentes,FEATURE
+Necesitamos la opción de importar datos desde Excel,FEATURE
+Estaría excelente un modo de alto contraste para accesibilidad,FEATURE
+Sugiero que agreguen un historial de cambios por registro,FEATURE
+Me gustaría que se pudiera arrastrar y soltar archivos,FEATURE
+Quisiera poder crear plantillas personalizadas de documentos,FEATURE
+Sería bueno tener una opción para guardar búsquedas favoritas,FEATURE
+Podrían añadir un calendario integrado con recordatorios,FEATURE
+Propongo una función para asignar tareas a otros miembros del equipo,FEATURE
+Me gustaría poder ver estadísticas semanales de uso,FEATURE
+Quisiera una API pública para conectar nuestros sistemas,FEATURE
+Sería bueno que el sistema permita firmar documentos de forma digital,FEATURE
+Estaría padre que agregaran un tema claro y uno oscuro,FEATURE
+Sugiero incluir un asistente que guíe a los nuevos usuarios,FEATURE
+Me gustaría contar con la opción de pagar con transferencia,FEATURE
+Podrían mejorar la pantalla de inicio con accesos directos,FEATURE
+Sería útil poder descargar todos mis datos en un solo archivo,FEATURE
+Quisiera que se agregue soporte para varios idiomas en los reportes,FEATURE
+Propongo añadir etiquetas para organizar mis proyectos,FEATURE
+Me gustaría que el buscador sugiriera resultados mientras escribo,FEATURE
+Sería excelente poder trabajar sin conexión y sincronizar después,FEATURE
+Podrían implementar un chat en vivo dentro de la plataforma,FEATURE
+Quisiera poder elegir qué columnas mostrar en las tablas,FEATURE
+Estaría bien una nueva función para duplicar registros con un clic,FEATURE
+Sugiero una integración con Google Calendar,FEATURE
+Me gustaría tener roles personalizados para mi equipo,FEATURE
+Sería útil que la app envíe un resumen diario por correo,FEATURE
+Propongo que agreguen un widget de resumen en el escritorio,FEATURE
+Quisiera una opción para programar publicaciones con anticipación,FEATURE
+Podrían añadir la posibilidad de comentar en cada documento,FEATURE
+Sería bueno poder cambiar el tamaño de letra de la aplicación,FEATURE
+Me gustaría que existiera una versión para tabletas,FEATURE
+Sugiero implementar autoguardado en los formularios largos,FEATURE
+Quisiera una función para comparar dos reportes lado a lado,FEATURE
+Estaría increíble poder conectar la cuenta con otras aplicaciones,FEATURE
+Alguien entró a mi cuenta sin autorización,SECURITY
+Recibí un correo sospechoso que parece phishing pidiendo mis datos,SECURITY
+Encontré un fallo de seguridad que permite ver información de otros usuarios,SECURITY
+Detecté accesos desde un país en el que nunca he estado,SECURITY
+Creo que mi computadora fue infectada con un virus que roba contraseñas,SECURITY
+Hay datos de clientes expuestos en un enlace público,SECURITY
+Alguien está haciéndose pasar por mí y envía mensajes a mis contactos,SECURITY
+Se filtró una base de datos con información de usuarios,SECURITY
+Encontré una vulnerabilidad XSS en el campo de comentarios,SECURITY
+"Me llegó un cargo que no reconozco, creo que robaron mis datos",SECURITY
+Detecté un ataque de fuerza bruta contra el servidor,SECURITY
+Un ransomware cifró los archivos de nuestro servidor,SECURITY
+"Hay una brecha de seguridad, vi información privada visible sin iniciar sesión",SECURITY
+Alguien cambió mi contraseña y mi correo sin que yo lo pidiera,SECURITY
+Mi cuenta muestra movimientos que yo no hice,SECURITY
+Descubrí que se puede acceder a facturas ajenas cambiando el número en la URL,SECURITY
+Recibí un mensaje que pretende ser de ustedes pidiendo mi clave,SECURITY
+Un empleado nos reportó que su cuenta fue suplantada,SECURITY
+Encontré un archivo con contraseñas de clientes en un repositorio público,SECURITY
+Sospecho que un atacante tiene acceso a nuestra red interna,SECURITY
+El sitio permite inyectar código SQL en el buscador,SECURITY
+Vi intentos de ingreso no autorizados en los registros del sistema,SECURITY
+Alguien robó mi sesión y está usando mi cuenta,SECURITY
+Hay un malware instalado en el servidor de producción,SECURITY
+Encontré claves de API expuestas en el código fuente público,SECURITY
+Me avisaron que mis datos aparecieron en una filtración en internet,SECURITY
+Creo que un tercero está interceptando las comunicaciones de la plataforma,SECURITY
+Se puede ver el contenido de otros usuarios sin tener permisos,SECURITY
+Detecté un posible fraude con tarjetas de crédito de nuestros clientes,SECURITY
+Un desconocido accedió a la información de mi empresa,SECURITY
+Descubrí una falla grave de seguridad en la API de pagos,SECURITY
+Hubo una fuga de datos personales de nuestros usuarios,SECURITY
+Alguien instaló un programa espía en mi equipo de trabajo,SECURITY
+Recibí notificaciones de inicio de sesión desde dispositivos que no son míos,SECURITY
+Una persona externa tuvo acceso no autorizado a nuestro sistema,SECURITY
+Reporto un exploit que da control total del servidor,SECURITY
+Mi correo fue hackeado y desde ahí entraron a la plataforma,SECURITY
+Se están usando mis datos para hacer compras fraudulentas,SECURITY
+Hay documentos confidenciales accesibles para cualquiera con el enlace,SECURITY
+Detecté tráfico extraño que parece un ataque de denegación de servicio,SECURITY
+Alguien accedió a mis datos bancarios a través de la plataforma,SECURITY
+Hallé una vulnerabilidad que permite saltarse la autenticación,SECURITY
+Creo que nos hicieron un ataque y robaron información de clientes,SECURITY
+Detecté un intento de suplantación de identidad con el dominio de la empresa,SECURITY
+"Quiero reportar un incidente de seguridad, hay datos sensibles filtrados",SECURITY

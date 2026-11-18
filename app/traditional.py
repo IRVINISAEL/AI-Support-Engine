@@ -58,6 +58,16 @@ def _has(text: str, words: list[str]) -> bool:
 def is_security_related(message: str) -> bool:
     return _has(normalize(message), KEYWORDS["SECURITY"])
 
+def priority_for(category: str, message: str, low_confidence: bool = False) -> str:
+    """Prioridad por reglas dada una categoría. Reutilizada por el motor ML."""
+    text = normalize(message)
+    if category == "SECURITY":
+        return "CRITICAL" if _has(text, SECURITY_CRITICAL) else "HIGH"
+    if category == "BUG":
+        return "LOW" if low_confidence else ("HIGH" if _has(text, BUG_HIGH) else "MEDIUM")
+    if category == "ACCESS":
+        return "HIGH" if _has(text, ACCESS_HIGH) else "MEDIUM"
+    return "LOW"
 
 def analyze_traditional(message: str) -> AnalyzeResponse:
     text = normalize(message)
@@ -72,15 +82,7 @@ def analyze_traditional(message: str) -> AnalyzeResponse:
             category, low_confidence = "BUG", True
         else:
             category = next(c for c in ["ACCESS", "BUG", "FEATURE"] if scores[c] == best)
-
-    if category == "SECURITY":
-        priority = "CRITICAL" if _has(text, SECURITY_CRITICAL) else "HIGH"
-    elif category == "BUG":
-        priority = "LOW" if low_confidence else ("HIGH" if _has(text, BUG_HIGH) else "MEDIUM")
-    elif category == "ACCESS":
-        priority = "HIGH" if _has(text, ACCESS_HIGH) else "MEDIUM"
-    else:
-        priority = "LOW"
+            priority = priority_for(category, message, low_confidence)
 
     return AnalyzeResponse(
         category=category,
