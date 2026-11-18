@@ -11,6 +11,7 @@ load_dotenv()
 
 from app.traditional import analyze_traditional
 from app.generative import analyze_generative, GenerativeError
+from app.ml import analyze_ml, MLError
 
 # (id, tipo, mensaje, categoría de referencia, prioridades aceptadas)
 CASES = [
@@ -33,17 +34,17 @@ def run(engine, message):
     try:
         r = engine(message)
         return r.category, r.priority, True, r.requiresHumanReview, ""
-    except GenerativeError as e:
+    except (GenerativeError, MLError) as e:
         return "ERROR", "-", False, False, str(e)
 
 
 rows = []
-stats = {"traditional": {"ok": 0, "cat": 0}, "generative": {"ok": 0, "cat": 0}}
+stats = {"traditional": {"ok": 0, "cat": 0}, "generative": {"ok": 0, "cat": 0}, "ml": {"ok": 0, "cat": 0}}
 
 for i, (cid, tipo, msg, ref_cat, ref_prios) in enumerate(CASES):
     print(f"\n[{cid}] ({tipo}) {msg}")
     print(f"    Referencia: {ref_cat} / {'|'.join(sorted(ref_prios))}")
-    for mode, engine in [("traditional", analyze_traditional), ("generative", analyze_generative)]:
+    for mode, engine in [("traditional", analyze_traditional), ("generative", analyze_generative), ("ml", analyze_ml)]:
         cat, prio, fmt, review, err = run(engine, msg)
         cat_ok = cat == ref_cat
         correct = cat_ok and prio in ref_prios
