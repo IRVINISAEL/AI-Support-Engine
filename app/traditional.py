@@ -82,7 +82,8 @@ def analyze_traditional(message: str) -> AnalyzeResponse:
             category, low_confidence = "BUG", True
         else:
             category = next(c for c in ["ACCESS", "BUG", "FEATURE"] if scores[c] == best)
-            priority = priority_for(category, message, low_confidence)
+
+    priority = priority_for(category, message, low_confidence)
 
     return AnalyzeResponse(
         category=category,
