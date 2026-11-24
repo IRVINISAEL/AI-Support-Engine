@@ -9,7 +9,7 @@ import joblib
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import classification_report
+from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.model_selection import cross_val_score, train_test_split
 from sklearn.pipeline import Pipeline
 
@@ -38,8 +38,12 @@ def main():
     # 1) Evaluación: entrenar con 80 % y medir con el 20 % que el modelo no vio
     model = build_pipeline()
     model.fit(X_train, y_train)
+    predictions = model.predict(X_test)
     print("=== Evaluación en el 20 % de prueba ===")
-    print(classification_report(y_test, model.predict(X_test)))
+    print(classification_report(y_test, predictions, zero_division=0))
+    print("Matriz de confusión (filas = real, columnas = predicho):")
+    print("Orden:", list(model.classes_))
+    print(confusion_matrix(y_test, predictions, labels=model.classes_), "\n")
 
     # 2) Validación cruzada: con un test de ~36 ejemplos, un solo split es poco fiable
     scores = cross_val_score(build_pipeline(), data["message"], data["category"], cv=5)
@@ -53,11 +57,12 @@ def main():
     joblib.dump(final_model, MODEL_PATH)
     print(f"Modelo guardado en {MODEL_PATH}")
 
-    # 4) Prueba rápida con confianza
-    texto = "Alguien entró a mi cuenta sin autorización"
-    probs = final_model.predict_proba([texto])[0]
-    best = probs.argmax()
-    print(f"Prueba: '{texto}' -> {final_model.classes_[best]} ({probs[best]:.2f})")
+    # 4) Predicción de mensajes nuevos, con score aproximado
+    for texto in ["Encontré datos de otros clientes",
+                  "Alguien entró a mi cuenta sin autorización"]:
+        category = final_model.predict([texto])[0]
+        confidence = final_model.predict_proba([texto]).max()
+        print(f"'{texto}'\n  Categoría: {category} | Score aproximado: {confidence:.3f}")
 
 
 if __name__ == "__main__":
